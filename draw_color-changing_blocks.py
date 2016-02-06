@@ -15,7 +15,7 @@ def draw_block_white(pos_width, pos_height, screen, r, g, b):
         for y in range(0, pos_height*50):
             screen.set_at([x, y], [r, g, b])
 
-if __name__ == '__main__':
+def main():
 
     pygame.init()
     win_width, win_height = 1000, 1000
@@ -42,15 +42,19 @@ if __name__ == '__main__':
                         pos_height += 1
 
                         for h in range(0, pos_height):
-                            draw_block_black(20, h, screen, random.randint(1, 255), random.randint(1, 255), random.randint(1, 255))
+                            draw_block_black(20, h, screen, random.randint(1, 255),\
+                            random.randint(1, 255), random.randint(1, 255))
 
-                        draw_block_black(pos_width, pos_height, screen, random.randint(1, 255), random.randint(1, 255), random.randint(1, 255))
+                        draw_block_black(pos_width, pos_height, screen, random.randint(1, 255),\
+                        random.randint(1, 255), random.randint(1, 255))
 
                     else:
                         pos_width += 1
                         for h in range(0, pos_height):
-                            draw_block_black(20, h, screen, random.randint(1, 255), random.randint(1, 255), random.randint(1, 255))
-                        draw_block_black(pos_width, pos_height, screen, random.randint(1, 255), random.randint(1, 255), random.randint(1, 255))
+                            draw_block_black(20, h, screen, random.randint(1, 255),\
+                            random.randint(1, 255), random.randint(1, 255))
+                        draw_block_black(pos_width, pos_height, screen, random.randint(1, 255),\
+                        random.randint(1, 255), random.randint(1, 255))
 
                     
                     pygame.display.flip()
@@ -83,15 +87,19 @@ if __name__ == '__main__':
                         pos_width += 1
                         
                         for w in range(0, pos_width):
-                            draw_block_white(w, 20, screen, random.randint(1, 255), random.randint(1, 255), random.randint(1, 255))
+                            draw_block_white(w, 20, screen, random.randint(1, 255),\
+                            random.randint(1, 255), random.randint(1, 255))
 
-                        draw_block_white(pos_width, pos_height, screen, random.randint(1, 255), random.randint(1, 255), random.randint(1, 255))
+                        draw_block_white(pos_width, pos_height, screen, random.randint(1, 255),\
+                        random.randint(1, 255), random.randint(1, 255))
 
                     else:
                         pos_height += 1
                         for w in range(0, pos_width):
-                            draw_block_white(w, 20, screen, random.randint(1, 255), random.randint(1, 255), random.randint(1, 255))
-                        draw_block_white(pos_width, pos_height, screen, random.randint(1, 255), random.randint(1, 255), random.randint(1, 255))
+                            draw_block_white(w, 20, screen, random.randint(1, 255),\
+                            random.randint(1, 255), random.randint(1, 255))
+                        draw_block_white(pos_width, pos_height, screen, random.randint(1, 255),\
+                        random.randint(1, 255), random.randint(1, 255))
 
                     
                     pygame.display.flip()
@@ -105,3 +113,6 @@ if __name__ == '__main__':
                     exit(0)
 
             timer -= 1
+
+if __name__ == '__main__':
+    main()
